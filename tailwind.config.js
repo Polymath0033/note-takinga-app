@@ -8,9 +8,8 @@ module.exports = {
     "./app.vue",
     "./error.vue",
   ],
-  darkMode:true,
+  darkMode: true,
   theme: {
-    
     extend: {
       colors: {
         neutral: {
@@ -92,18 +91,16 @@ module.exports = {
         ],
       },
       borderRadius: {
-     
-          0: "0px",
-          4: "4px",
-          6: "6px",
-          8: "8px",
-          10: "10px",
-          12: "12px",
-          16: "16px",
-          20: "20px",
-          24: "24px",
-          full: "999px",
-        
+        0: "0px",
+        4: "4px",
+        6: "6px",
+        8: "8px",
+        10: "10px",
+        12: "12px",
+        16: "16px",
+        20: "20px",
+        24: "24px",
+        full: "999px",
       },
       boxShadow: {
         small: "0px 4px 6px 0px rgba(240, 240, 240, 0.60);",
@@ -117,18 +114,19 @@ module.exports = {
         100: "8px",
         150: "12px",
         200: "16px",
+        250: "20px",
         300: "24px",
         400: "32px",
         500: "40px",
         600: "48px",
         800: "64px",
-        1000: "80px"
+        1000: "80px",
       },
       fontFamily: {
         sans: ["Inter", "sans-serif"],
         serif: ["Noto serif", "serif"],
-        monospace:["Source code pro","monospace"]
-      }
+        monospace: ["Source code pro", "monospace"],
+      },
     },
   },
   plugins: [],

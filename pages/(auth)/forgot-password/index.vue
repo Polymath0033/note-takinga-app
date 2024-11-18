@@ -2,6 +2,10 @@
 import AuthComponent from "~/components/molecules/auth-component.vue";
 import AppButton from "~/components/atoms/app-button.vue";
 import AppInput from "~/components/atoms/app-input.vue";
+definePageMeta({
+  title: "Forgot Password",
+  layout: false
+});
 </script>
 <template>
   <AuthComponent

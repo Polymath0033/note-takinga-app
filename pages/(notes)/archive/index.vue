@@ -1,14 +1,14 @@
 <script setup lang="ts">
-import AppHeader from "~/components/molecules/app-header.vue";
 import { useNotes } from "~/stores/notes";
 import { storeToRefs } from "pinia";
 import SideNavigation from "~/components/molecules/side-navigation.vue";
-const { notes } = storeToRefs(useNotes());
+import AppHeader from "~/components/molecules/app-header.vue";
+const { getArchivedNotes } = storeToRefs(useNotes());
 </script>
 <template>
-  <AppHeader title="All Notes" />
+  <AppHeader title="Archived Notes" />
   <main class="relative top-[81px]">
-    <SideNavigation :notes="notes" />
+    <SideNavigation :notes="getArchivedNotes" />
   </main>
 </template>
 

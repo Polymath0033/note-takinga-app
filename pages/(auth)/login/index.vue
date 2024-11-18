@@ -2,6 +2,11 @@
 import AuthComponent from "~/components/molecules/auth-component.vue";
 import AppInput from "~/components/atoms/app-input.vue";
 import AppButton from "~/components/atoms/app-button.vue";
+definePageMeta({
+  title: "Log In",
+  description: "Please log in to continue.",
+  layout: false,
+});
 const type = ref("password");
 const togglePassword = () => {
   type.value = type.value === "password" ? "text" : "password";

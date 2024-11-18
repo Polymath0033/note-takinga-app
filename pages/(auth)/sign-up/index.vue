@@ -6,6 +6,11 @@ const type = ref("password");
 const togglePassword = () => {
   type.value = type.value === "password" ? "text" : "password";
 };
+definePageMeta({
+  title: "Sign Up",
+  description: "Sign up to start organizing your notes and boost your productivity.",
+  layout: false,
+});
 </script>
 <template>
   <AuthComponent
