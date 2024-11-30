@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import AppSide from "~/components/molecules/app-side.vue";
 import { useResponsiveness } from "~/composable/responsiveness";
+import AppFooter from "~/components/molecules/app-footer.vue";
 const { isTablet } = useResponsiveness();
 </script>
 <template>
@@ -14,6 +15,7 @@ const { isTablet } = useResponsiveness();
     >
       <slot />
     </div>
+    <AppFooter />
   </div>
 </template>
 

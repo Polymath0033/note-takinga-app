@@ -14,5 +14,8 @@ export default defineNuxtConfig({
   pinia: {
     storesDirs: ["~/stores"],
   },
-  modules: ["@pinia/nuxt"],
+  tiptap: {
+    prefix: "Tiptap",
+  },
+  modules: ["@pinia/nuxt", "nuxt-tiptap-editor"],
 });

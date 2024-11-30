@@ -6,17 +6,18 @@ import TagIcon from "../atoms/icons/tag-icon.vue";
 import { useResponsiveness } from "~/composable/responsiveness";
 const { isTablet } = useResponsiveness();
 import { useNotes } from "~/stores/notes";
-//import { storeToRefs } from "pinia";
 const noteStore = useNotes();
-
 const route = useRoute();
 const tags = computed(() => route.path === "/archive" ? noteStore.getArchivedTags : noteStore.getAllTags);
-// console.log(route.path.split("/")[1]);
 const activeRoute = computed(() => route.path.split("/")[1]);
+const computedRoute = computed(() => {
+  const arrayRoute = route.path.split("/");
+  return arrayRoute;
+})
 </script>
 <template>
   <aside v-if="!isTablet"
-    class="py-150 px-200 h-screen fixed top-0 left-0 w-[272px] bg-white hidden md:flex flex-col items-center gap-200 border-r border-r-neutral-200"
+    class="py-150 px-200 h-screen fixed top-0 left-0 w-[272px] bg-white hidden md:flex flex-col items-center gap-200 border-r border-r-neutral-200 z-30"
   >
     <div
       class="w-full py-3 px-0 flex justify-between items-center self-stretch"

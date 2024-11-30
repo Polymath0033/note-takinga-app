@@ -26,5 +26,6 @@ export const useNotes = defineStore({
         });
       return Array.from(tags);
     },
+    getNotesBySlug: (state) => (slug: string[]) => {},
   },
 });

@@ -52,7 +52,6 @@ const getNotesByTag = computed(() => {
     }
     return [];
 })
-
 </script>
 <template>
   <AppHeader :title="slug.length >= 1 && tagExists ? '' : 'All Notes'">

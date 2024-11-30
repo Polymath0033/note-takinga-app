@@ -11,5 +11,4 @@ const { getArchivedNotes } = storeToRefs(useNotes());
     <SideNavigation :notes="getArchivedNotes" />
   </main>
 </template>
-
 <style scoped></style>

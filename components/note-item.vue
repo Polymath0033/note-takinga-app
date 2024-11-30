@@ -7,15 +7,23 @@ const props = defineProps<{
 }>();
 
 const route = useRoute();
+// watchEffect(() => {
+//   console.log("r", route.path);
+// });
 const computedRoute = computed(() => {
   const previousRoute = route.path;
   const arrayRoute = previousRoute.split("/");
+
   if (arrayRoute.length > 2) {
     arrayRoute.pop();
   }
-  const prevRoute = arrayRoute.join("/");
+
+  let prevRoute = arrayRoute.join("/");
+  if (prevRoute === "") {
+    prevRoute = "/";
+  }
   const newRoute = slugify(props.title);
-  return prevRoute ? `${prevRoute}/${newRoute}` : `/${newRoute}`;
+  return prevRoute === "/" ? `/${newRoute}` : `${prevRoute}/${newRoute}`;
 });
 </script>
 <template>
